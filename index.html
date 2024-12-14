@@ -19,11 +19,19 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        img {
+            max-width: 100%; /* Устанавливаем максимальную ширину для адаптивности */
+            height: auto; /* Сохраняем пропорции изображения */
+        }
     </style>
 </head>
 <body>
 
 <h1>Добро пожаловать в наше приложение!</h1>
+
+<!-- Добавляем изображение -->
+<img src="https://i.ibb.co/6rfgmj7" alt="Изображение" />
+
 <button id="mainButton">Отправить данные</button>
 
 <script>
