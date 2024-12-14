@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Mini App</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        #mainButton {
+            padding: 10px 20px;
+            background-color: #0088cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Добро пожаловать в наше приложение!</h1>
+<button id="mainButton">Отправить данные</button>
+
+<script>
+    let tg = window.Telegram.WebApp;
+
+    // Устанавливаем текст главной кнопки
+    tg.MainButton.text = "Отправить данные";
+    tg.MainButton.show();
+
+    document.getElementById("mainButton").onclick = function() {
+        // Отправляем данные обратно в бот
+        tg.sendData("Ваши данные");
+    };
+
+    // Обработка события нажатия главной кнопки
+    tg.onEvent('mainButtonClicked', function() {
+        tg.sendData("Данные отправлены!");
+    });
+</script>
+
+</body>
+</html>
