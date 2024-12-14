@@ -10,27 +10,28 @@
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 20px;
+            background-image: url('img.jpg'); /* Устанавливаем изображение фоном */
+            background-size: cover; /* Масштабируем изображение, чтобы оно заполнило весь фон */
+            background-position: center; /* Центрируем изображение */
+            background-repeat: no-repeat; /* Не повторяем изображение */
+            color: white; /* Устанавливаем цвет текста для лучшей читаемости */
         }
         #mainButton {
             padding: 10px 20px;
-            background-color: #0088cc;
+            background-color: rgba(0, 136, 204, 0.7); /* Полупрозрачный фон для кнопки */
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
-        img {
-            max-width: 100%; /* Устанавливаем максимальную ширину для адаптивности */
-            height: auto; /* Сохраняем пропорции изображения */
+        h1 {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Тень для заголовка для лучшей читаемости */
         }
     </style>
 </head>
 <body>
 
 <h1>Добро пожаловать в наше приложение!</h1>
-
-<!-- Используем относительный путь к изображению -->
-<img src="img.jpg" alt="Изображение" />
 
 <button id="mainButton">Отправить данные</button>
 
